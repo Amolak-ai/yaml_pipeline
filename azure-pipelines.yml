@@ -32,9 +32,11 @@ stages:
             command: 'validate'
             workingDirectory: '$(System.DefaultWorkingDirectory)/infra'
         - task: TerraformTask@5
+          displayName: plan
           inputs:
             provider: 'azurerm'
             command: 'plan'
             workingDirectory: '$(System.DefaultWorkingDirectory)/infra'
+            environmentServiceNameAzureRM: 'amol-sc'
    
  
