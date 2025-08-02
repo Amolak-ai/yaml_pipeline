@@ -20,7 +20,7 @@ stages:
             provider: 'azurerm'
             command: 'init'
             workingDirectory: '$(System.DefaultWorkingDirectory)/infra'
-            backendServiceArm: 'amol-sc'
+            backendServiceArm: 'amol-fedid'
             backendAzureRmResourceGroupName: 'rgamak'
             backendAzureRmStorageAccountName: 'amakstg'
             backendAzureRmContainerName: 'amakcontainer'
@@ -37,13 +37,13 @@ stages:
             provider: 'azurerm'
             command: 'plan'
             workingDirectory: '$(System.DefaultWorkingDirectory)/infra'
-            environmentServiceNameAzureRM: 'amol-sc'
+            environmentServiceNameAzureRM: 'amol-fedid'
         - task: TerraformTask@5
           displayName: apply
           inputs:
             provider: 'azurerm'
             command: 'apply'
             workingDirectory: '$(System.DefaultWorkingDirectory)/infra'
-            environmentServiceNameAzureRM: 'amol-sc'
+            environmentServiceNameAzureRM: 'amol-fedid'
    
  
