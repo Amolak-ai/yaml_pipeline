@@ -10,3 +10,7 @@ resource "azurerm_resource_group" "rg2" {
   name     = "amak-rg2"
   location = "West Europe"
 }
+resource "azurerm_resource_group" "rg5" {
+  name     = "amak-rg5"
+  location = "West Europe"
+}
