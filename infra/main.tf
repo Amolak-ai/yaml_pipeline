@@ -14,3 +14,7 @@ resource "azurerm_resource_group" "rg4" {
   name     = "amak-rg4"
   location = "West Europe"
 }
+resource "azurerm_resource_group" "rg5" {
+  name     = "amak-rg5"
+  location = "West Europe"
+}
